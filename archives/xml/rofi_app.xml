@@ -1,0 +1,27 @@
+<programs>
+    <program>
+        <name>Firefox</name>
+        <description>Navegador-Web</description>
+        <command>firefox</command>
+    </program>
+    <program>
+        <name>Ranger</name>
+        <description>Gestor-De-Archivos</description>
+        <command>ranger</command>
+    </program>
+    <program>
+        <name>pluma</name>
+        <description>Editor-de-Texto-mediante-GUI</description>
+        <command>pluma</command>
+	</program>
+    <program>
+        <name>MidnightCommander</name>
+        <description>Gestor-De-Archivos</description>
+        <command>mc</command>
+    </program>
+    <program>
+        <name>Htop</name>
+        <description>Visualizador-De-Procesos</description>
+        <command>htop</command>
+	</program>
+</programs>
