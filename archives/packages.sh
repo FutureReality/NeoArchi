@@ -73,7 +73,7 @@ install_section "Paquetes Opcionales" "$optional_packages"
 
 # Finalización
 clear
+cd theme/
+sudo -u "$SUDO_USER" makepkg -sri
 figlet "Instalación Completa"
 cowsay -f dragon "Paquetes seleccionados instalados!; Deberias reiniciar"
-
-
