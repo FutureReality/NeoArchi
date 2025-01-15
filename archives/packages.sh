@@ -52,7 +52,7 @@ basic_file_tools="nano vim feh mpv unrar unzip p7zip gzip"
 install_section "Paquetes Básicos para Archivos" "$basic_file_tools"
 
 # Paquetes para análisis del sistema y de red
-network_analysis="neofetch bottom iftop tcpdump curl wget sysstat lm-sensor"
+network_analysis="neofetch bottom iftop tcpdump curl wget sysstat"
 install_section "Análisis del Sistema y Red" "$network_analysis"
 
 # Paquetes de seguridad
