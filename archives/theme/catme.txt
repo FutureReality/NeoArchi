@@ -1,0 +1,1 @@
+Este PKGBUILD pertenece a un tema del gestor de inicio de sesion lightdm
