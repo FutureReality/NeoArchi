@@ -74,12 +74,6 @@ install_section "Paquetes Opcionales" "$optional_packages"
 # Finalización
 clear
 figlet "Instalación Completa"
-cowsay -f dragon "Paquetes seleccionados instalados!"
+cowsay -f dragon "Paquetes seleccionados instalados!; Deberias reiniciar"
 
-# Llamar al archivo files.sh para realizar el git clone
-if [[ -f "./files.sh" ]]; then
-    echo "Ejecutando 'files.sh' para clonar el repositorio."
-    bash ./files.sh
-else
-    echo "No se encontró el archivo 'files.sh'."
-fi
+
