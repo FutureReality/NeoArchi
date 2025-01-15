@@ -75,5 +75,7 @@ install_section "Paquetes Opcionales" "$optional_packages"
 clear
 cd theme/
 sudo -u "$SUDO_USER" makepkg -sri
+
+clear
 figlet "Instalación Completa"
 cowsay -f dragon "Paquetes seleccionados instalados!; Deberias reiniciar"
