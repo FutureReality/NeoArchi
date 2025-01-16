@@ -44,7 +44,7 @@ non_essential_graphic_packages="kitty nitrogen dunst rofi picom"
 install_section "Entorno Gráfico No-Esencial" "$non_essential_graphic_packages"
 
 # Servicios necesarios y utilidades del sistema
-system_utilities="pulseaudio networkmanager cups alsa-utils usbutils net-tools util-linux base-devel"
+system_utilities="pulseaudio networkmanager cups cups-pdf alsa-utils usbutils net-tools util-linux base-devel"
 install_section "Servicios y Utilidades del Sistema" "$system_utilities"
 
 # Paquetes básicos para archivos
