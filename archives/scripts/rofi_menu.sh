@@ -19,3 +19,10 @@ selected_program=$(printf "%s\n" "${menu_items[@]}" | rofi -dmenu -p "Selecciona
 
 # Extrae únicamente el nombre del programa seleccionado, eliminando la descripción.
 selected_name=$(echo "$selected_program" | sed 's/ (\(.*\))//')
+
+# Cambiamos el nombre de la aplicacion en caso de que tuvieramos que identificarlo por el modo en le cual la iniciamos.
+for i in "${!programs[@]}"; do
+    if [[ "${programs[i]}" == "$selected_name" ]]; then
+        eval "kitty -T 'WithRofi' ${commands[i]}" &
+        break
+    fi
