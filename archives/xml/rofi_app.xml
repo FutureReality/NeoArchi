@@ -5,24 +5,14 @@
         <command>firefox &amp; exit</command>
     </program>
     <program>
-        <name>Ranger</name>
-        <description>Gestor-De-Archivos</description>
-        <command>ranger &amp; exit</command>
+        <name>nmtui</name>
+        <description>Administrador-De-Redes</description>
+        <command>nmtui &amp; exit</command>
     </program>
     <program>
-        <name>pluma</name>
-        <description>Editor-de-Texto-mediante-GUI</description>
-        <command>pluma &amp; exit</command>
-    </program>
-    <program>
-        <name>MidnightCommander</name>
-        <description>Gestor-De-Archivos</description>
-        <command>mc &amp; exit</command>
-    </program>
-    <program>
-        <name>Htop</name>
+        <name>bottom</name>
         <description>Visualizador-De-Procesos</description>
-        <command>htop &amp; exit</command>
+        <command>btm &amp; exit</command>
     </program>
     <program>
         <name>neofetch</name>
