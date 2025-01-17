@@ -1,42 +1,44 @@
 #!/bin/bash
 
-# You can call this script like this:
-# $./volume.sh up
-# $./volume.sh down
-# $./volume.sh mute
-
+# Creamos la función que nos permite agarrar el volumen;
+# básicamente se muestra información del volumen "master" y se recorta la información hasta solo tener el int
 function get_volume {
     amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 }
 
+# Esta función verifica si el audio se encuentra muteado.
+# Busca la palabra "off" en la salida de amixer.
 function is_mute {
     amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
+# Declaramos un par de variables, la primera manda el volumen actual mientras que la segunda
+# manda la info necesarias para que dunst pueda hacer uso de su barra. Luego las variables
+# son mandadas a dunst.
 function send_notification {
     volume=`get_volume`
-    # Make the bar with the special character ─ (it's not dash -)
-    # https://en.wikipedia.org/wiki/Box-drawing_character
     bar=$(seq -s "─" $(($volume / 5)) | sed 's/[0-9]//g')
-    # Send the notification
     dunstify -i audio-volume-muted-blocking -t 1000 -r 2593 -u normal "    $bar"
 }
 
+# Segun lo enviado se ejecuta uno de los tres casos:
 case $1 in
     up)
-	# Set the volume on (if it was muted)
+	# Activamos el volumen si está muteado y lo incrementamos un 5%
 	amixer -D pulse set Master on > /dev/null
-	# Up the volume (+ 5%)
 	amixer -D pulse sset Master 5%+ > /dev/null
 	send_notification
 	;;
     down)
+	# Activamos el volumen si está muteado y lo reducimos un 5%
 	amixer -D pulse set Master on > /dev/null
 	amixer -D pulse sset Master 5%- > /dev/null
 	send_notification
 	;;
     mute)
-    	# Toggle mute
+	# Alternamos entre mute y unmute;
+	# si el estado es mute, se notifica con un mensaje "Mute",
+	# caso contrario, se envía la barra de volumen.
 	amixer -D pulse set Master 1+ toggle > /dev/null
 	if is_mute ; then
 	    dunstify -i audio-volume-muted -t 1000 -r 2593 -u normal "Mute"
