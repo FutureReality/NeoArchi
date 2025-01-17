@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <programs>
     <program>
         <name>Firefox</name>
         <description>Navegador-Web</description>
-        <command>nohup firefox &amp; disown ; exit</command>
+        <command>nohup firefox &amp; disown &amp; exit</command>
     </program>
     <program>
         <name>Ranger</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup ranger &amp; disown ; exit</command>
+        <command>nohup ranger &amp; disown &amp; exit</command>
     </program>
     <program>
         <name>pluma</name>
         <description>Editor-de-Texto-mediante-GUI</description>
-        <command>nohup pluma &amp; disown ; exit</command>
+        <command>nohup pluma &amp; disown &amp; exit</command>
     </program>
     <program>
         <name>MidnightCommander</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup mc &amp; disown ; exit</command>
+        <command>nohup mc &amp; disown &amp; exit</command>
     </program>
     <program>
         <name>Htop</name>
         <description>Visualizador-De-Procesos</description>
-        <command>nohup htop &amp; disown ; exit</command>
+        <command>nohup htop &amp; disown &amp; exit</command>
     </program>
 </programs>
