@@ -2,26 +2,66 @@
     <program>
         <name>Firefox</name>
         <description>Navegador-Web</description>
-        <command>nohup firefox &amp; disown &amp; exit</command>
+        <command>firefox &amp; exit</command>
     </program>
     <program>
         <name>Ranger</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup ranger &amp; disown &amp; exit</command>
+        <command>ranger &amp; exit</command>
     </program>
     <program>
         <name>pluma</name>
         <description>Editor-de-Texto-mediante-GUI</description>
-        <command>nohup pluma &amp; disown &amp; exit</command>
+        <command>pluma &amp; exit</command>
     </program>
     <program>
         <name>MidnightCommander</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup mc &amp; disown &amp; exit</command>
+        <command>mc &amp; exit</command>
     </program>
     <program>
         <name>Htop</name>
         <description>Visualizador-De-Procesos</description>
-        <command>nohup htop &amp; disown &amp; exit</command>
+        <command>htop &amp; exit</command>
+    </program>
+    <program>
+        <name>neofetch</name>
+        <description>Información del Sistema</description>
+        <command>neofetch &amp; exit</command>
+    </program>
+    <program>
+        <name>kitty</name>
+        <description>Emulador-de-Terminal</description>
+        <command>kitty &amp; exit</command>
+    </program>
+    <program>
+        <name>feh</name>
+        <description>Visor-de-Imágenes</description>
+        <command>feh &amp; exit</command>
+    </program>
+    <program>
+        <name>mpv</name>
+        <description>Reproductor-de-Multimedia</description>
+        <command>mpv &amp; exit</command>
+    </program>
+    <program>
+        <name>qutebrowser</name>
+        <description>Navegador-Web</description>
+        <command>qutebrowser &amp; exit</command>
+    </program>
+    <program>
+        <name>neovim</name>
+        <description>Editor-de-Texto</description>
+        <command>nvim &amp; exit</command>
+    </program>
+    <program>
+        <name>libreoffice</name>
+        <description>Suite-Ofimática</description>
+        <command>libreoffice &amp; exit</command>
+    </program>
+    <program>
+        <name>virtualbox</name>
+        <description>Virtualización</description>
+        <command>virtualbox &amp; exit</command>
     </program>
 </programs>
