@@ -1,23 +1,17 @@
 #!/bin/bash
 
-# Verificar si se ejecuta como root (con privilegios de sudo)
+# Hacemos una comprobacino de si el archivo se esta ejecutando con sudo
 if [[ $EUID -ne 0 ]]; then
    echo "Ejecutar con sudo !!" 
    exit 1
 fi
 
-# Instalar figlet y cowsay si no están instalados
-if ! command -v figlet &> /dev/null; then
-    echo "Instalando figlet..."
-    pacman -S --noconfirm figlet
-fi
+# Instalamos fig y cow para la "interfaz" de la instalacion, no pedimos confirmacion
+echo "Interfaz de instalacion: Instalando figlet & cowsay"
+pacman -S --noconfirm figlet cowsay
 
-if ! command -v cowsay &> /dev/null; then
-    echo "Instalando cowsay..."
-    pacman -S --noconfirm cowsay
-fi
-
-# Función para mostrar un apartado y preguntar si se desea instalar
+# Vamos creando las secciones, la de instalacion y las secciones de paquetes; La seccion de instalacion va con dos
+#variables, asi vamos iterando sobre paquetes y secciones.
 install_section() {
     section_name="$1"
     packages="$2"
@@ -25,7 +19,8 @@ install_section() {
     clear
     figlet "$section_name"
     cowsay -f dragon "$packages"
-    
+
+#Preguntamos si el usuario quiere instalar ese apartado.
     read -p "¿Deseas instalar estos paquetes? (s/n): " response
     if [[ "$response" =~ ^[Ss]$ ]]; then
         echo "Instalando paquetes..."
@@ -78,4 +73,4 @@ sudo -u "$SUDO_USER" makepkg -sri
 
 clear
 figlet "Instalación Completa"
-cowsay -f dragon "Paquetes seleccionados instalados!; Deberias reiniciar"
+cowsay -f dragon "Paquetes seleccionados instalados! Deberias reiniciar"
