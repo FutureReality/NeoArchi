@@ -2,26 +2,26 @@
     <program>
         <name>Firefox</name>
         <description>Navegador-Web</description>
-        <command>nohup firefox &gt;/dev/null 2&gt;&amp;1 &amp;</command>
+        <command><![CDATA[nohup firefox >/dev/null 2>&1 &]]></command>
     </program>
     <program>
         <name>Ranger</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup ranger &gt;/dev/null 2&gt;&amp;1 &amp;</command>
+        <command><![CDATA[nohup ranger >/dev/null 2>&1 &]]></command>
     </program>
     <program>
-        <name>Pluma</name>
+        <name>pluma</name>
         <description>Editor-de-Texto-mediante-GUI</description>
-        <command>nohup pluma &gt;/dev/null 2&gt;&amp;1 &amp;</command>
+        <command><![CDATA[nohup pluma >/dev/null 2>&1 &]]></command>
     </program>
     <program>
         <name>MidnightCommander</name>
         <description>Gestor-De-Archivos</description>
-        <command>nohup mc &gt;/dev/null 2&gt;&amp;1 &amp;</command>
+        <command><![CDATA[nohup mc >/dev/null 2>&1 &]]></command>
     </program>
     <program>
         <name>Htop</name>
         <description>Visualizador-De-Procesos</description>
-        <command>nohup htop &gt;/dev/null 2&gt;&amp;1 &amp;</command>
+        <command><![CDATA[nohup htop >/dev/null 2>&1 &]]></command>
     </program>
 </programs>
