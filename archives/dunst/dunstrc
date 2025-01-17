@@ -1,5 +1,4 @@
 [global]
-
 timeout = 8
 pause_on_fullscreen = true
 log = ~/.config/dunst/dunst.log
@@ -16,10 +15,24 @@ width = 300
 heigth = 200
 origin = bottom-center
 
-
 ignore_duplicates = true
 offset = (0, 35)
 
 notification_limit = 1
 
 progress_bar = true
+
+[urgency_low]
+frame_color = "#000055"   # Borde por defecto
+background = "#000b1e"
+foreground = "#0abdc6"
+
+[urgency_normal]
+frame_color = "#00ff00"   # Borde verde
+background = "#000b1e"
+foreground = "#0abdc6"
+
+[urgency_critical]
+frame_color = "#ff0000"   # Borde rojo
+background = "#000b1e"
+foreground = "#0abdc6"
